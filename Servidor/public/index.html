@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./persona.js"></script>
+    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Modelo examen alejandro</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Persona</legend>
+            <script>alert("asd")</script>
+            <div class="persona">
+                <label for="idPersona">ID: <input type="number" id="idPersona" readonly></label>
+                <label for="nombre">Nombre: <input type="text" id="nombre"></label>
+                <label for="apellido">apellido: <input type="text" id="apellido"></label>
+                <label for="edad">edad: <input type="number" id="edad" min="0" max="100"></label>
+            </div>
+            
+        </fieldset>
+        <input type="submit" value="cargar Persona" class="submit">
+    </form>
+
+    <div id="tablaDinamica"></div>
+        
+</body>
+</html>

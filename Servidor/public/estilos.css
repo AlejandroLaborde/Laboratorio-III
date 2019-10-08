@@ -1,0 +1,14 @@
+
+
+.persona{
+    display: flex;
+    justify-content: space-around;
+    background: ghostwhite;
+    
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    background: greenyellow;
+}
