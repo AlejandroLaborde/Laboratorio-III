@@ -2,6 +2,7 @@
 function crearTabla(array){
     let tabla= document.createElement('table');
     tabla.setAttribute('border', '2px');
+    
 
     tabla.appendChild(creaTh(array[0]));
     for(var i=0;i<array.length;i++){
@@ -32,6 +33,7 @@ function creaTr(object){
     fila.addEventListener('click',llenaFormulario);
     fila.appendChild(creaTd(object.id));
     fila.appendChild(creaTd(object.titulo));
+    console.log(object);
     fila.appendChild(creaTd(object.transaccion));
     fila.appendChild(creaTd(object.descripcion));
     fila.appendChild(creaTd(object.precio));

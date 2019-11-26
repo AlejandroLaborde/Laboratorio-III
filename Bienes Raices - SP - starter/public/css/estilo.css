@@ -12,6 +12,11 @@
 
 }
 
+.filtros{
+    background-color: bisque;
+    padding: 10px;
+}
+
 .botonmodificar{
 
     background: green;

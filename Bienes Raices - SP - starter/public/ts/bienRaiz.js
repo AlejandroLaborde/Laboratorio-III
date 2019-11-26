@@ -9,9 +9,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var anuncios = /** @class */ (function (_super) {
-    __extends(anuncios, _super);
-    function anuncios(titulo, transaccion, descripcion, precio, num_wc, num_esta, num_dormi, id) {
+var bienRaiz = /** @class */ (function (_super) {
+    __extends(bienRaiz, _super);
+    function bienRaiz(titulo, transaccion, descripcion, precio, num_wc, num_esta, num_dormi, id) {
         var _this = _super.call(this, transaccion) || this;
         _this._titulo = titulo;
         _this._precio = precio;
@@ -24,7 +24,7 @@ var anuncios = /** @class */ (function (_super) {
         _this._num_estacionamiento = num_esta;
         return _this;
     }
-    Object.defineProperty(anuncios.prototype, "titulo", {
+    Object.defineProperty(bienRaiz.prototype, "titulo", {
         get: function () {
             return this._titulo;
         },
@@ -34,7 +34,7 @@ var anuncios = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(anuncios.prototype, "num_wc", {
+    Object.defineProperty(bienRaiz.prototype, "num_wc", {
         get: function () {
             return this._num_wc;
         },
@@ -44,7 +44,7 @@ var anuncios = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(anuncios.prototype, "num_estacionamiento", {
+    Object.defineProperty(bienRaiz.prototype, "num_estacionamiento", {
         get: function () {
             return this._num_estacionamiento;
         },
@@ -54,7 +54,7 @@ var anuncios = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(anuncios.prototype, "num_dormitorio", {
+    Object.defineProperty(bienRaiz.prototype, "num_dormitorio", {
         get: function () {
             return this._num_dormitorio;
         },
@@ -64,7 +64,7 @@ var anuncios = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(anuncios.prototype, "id", {
+    Object.defineProperty(bienRaiz.prototype, "id", {
         get: function () {
             return this._id;
         },
@@ -74,7 +74,7 @@ var anuncios = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(anuncios.prototype, "descripcion", {
+    Object.defineProperty(bienRaiz.prototype, "descripcion", {
         get: function () {
             return this._descripcion;
         },
@@ -84,7 +84,7 @@ var anuncios = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(anuncios.prototype, "precio", {
+    Object.defineProperty(bienRaiz.prototype, "precio", {
         get: function () {
             return this._precio;
         },
@@ -94,9 +94,9 @@ var anuncios = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    anuncios.prototype.devuelveAtributos = function () {
+    bienRaiz.prototype.devuelveAtributos = function () {
         var atributos = { id: "", titulo: "", transaccion: "", descripcion: "", precio: "", num_wc: "", num_estacionamiento: "", num_dormitorios: "" };
         return atributos;
     };
-    return anuncios;
-}(bienRaiz));
+    return bienRaiz;
+}(anuncio));

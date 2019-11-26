@@ -9,14 +9,13 @@ window.addEventListener('load', () => {
 
 var arrayAnuncios = [];
 
-
 function cargarDatos() {
     arrayAnuncios = [];
     let aux = document.getElementById("tabladinamica");
     aux.innerHTML = "";
     arrayAux = JSON.parse(localStorage.getItem("anuncios"));
     arrayAux.forEach(object => {
-        let anunci = new anuncios(object._titulo, object._transaccion, object._descripcion, object._precio, object._num_wc, object._num_estacionamiento, object._num_dormitorio, object._id);
+        let anunci = new bienRaiz(object._titulo, object._transaccion, object._descripcion, object._precio, object._num_wc, object._num_estacionamiento, object._num_dormitorio, object._id);
         arrayAnuncios.push(anunci);
     });
     document.getElementById("eliminar").style.visibility = "visible";
@@ -112,18 +111,18 @@ function filtrados() {
 
     switch ($('#ss_tipoTransaccion').val()) {
         case 'alquiler':
-            arrayRetorno= arrayAnuncios.filter(obj=> obj.transaccion=='alquiler');
+            arrayRetorno= arrayAnuncios.filter(obj=> obj.transaccion==Etransaccion[Etransaccion.alquiler]);
             break;
-        case 'Ventas':
-            arrayRetorno= arrayAnuncios.filter(obj=> obj.transaccion=='Ventas');
+        case 'venta':
+            arrayRetorno= arrayAnuncios.filter(obj=> obj.transaccion==Etransaccion[Etransaccion.venta]);
             break;
         case 'Todos':
             arrayRetorno=arrayAnuncios;
             break;
     }
 
-    console.log(arrayRetorno.map(element=>element.precio)
-    .reduce((prev, curr) => (parseInt(prev) + parseInt(curr))));
+    $('#txt_precio')[0].value=arrayRetorno.map(element=>element.precio)
+    .reduce((prev, curr) => (parseInt(prev) + parseInt(curr)))/arrayRetorno.length;
 
 
     arrayRetorno.forEach(element => {
@@ -153,18 +152,16 @@ function filtrados() {
         arrayAux.push(aux);
     });
     
-    
-
-    
+    console.log("paso");
     mostrarTabla(arrayAux);
 }
 
 function traeDatosForm() {
     let id = document.forms[0].idanuncio.value;
     let titulo = document.forms[0].titulo.value;
-    let transaccion = "alquiler";
+    let transaccion = Etransaccion[Etransaccion.alquiler];
     if (document.forms[0].Venta.checked) {
-        transaccion = "Ventas";
+        transaccion = Etransaccion[Etransaccion.venta];
     }
     let descripcion = document.forms[0].descripcion.value;
     let precio = document.forms[0].precio.value;
@@ -172,7 +169,7 @@ function traeDatosForm() {
     let num_estacionamiento = document.forms[0].autos.value;
     let num_dormitorio = document.forms[0].dormitorios.value;
 
-    var anuncio = new anuncios(titulo, transaccion, descripcion, precio, num_wc, num_estacionamiento, num_dormitorio, id);
+    var anuncio = new bienRaiz(titulo, transaccion, descripcion, precio, num_wc, num_estacionamiento, num_dormitorio, id);
 
     return anuncio;
 }

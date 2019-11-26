@@ -28,23 +28,8 @@ function cargarSelect(sel, arr) {
 
 function limpiarSelect(sel) {
     sel.options.length = 0;
-    // while (sel.hasChildNodes()) {
-    //     sel.removeChild(sel.firstElementChild);
-    // }
 }
 
-// function calcularEdad(arr) {
-//     let promedio = arr.map(obj => parseInt(obj.edad))
-//         .reduce((prev, curr) => (prev + curr))/arr.length;
-//     //$('#txtInfoEdad').val(promedio.toFixed(2));
-// }
-
-// function calcularGenderMix(arr) {
-//     let cantidadLegisladores = arr.length;
-//     let cantidadMujeres = arr.filter(obj => obj.sexo === "Femenino").length;
-//     let genderMix = (cantidadMujeres/cantidadLegisladores) * 100;
-//     $('#txtInfoEdad').val(genderMix.toFixed(2));
-// }
 
 Array.prototype.unique = function() {
     return [...new Set(this)];

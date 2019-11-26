@@ -1,6 +1,6 @@
 
 
-class anuncios extends bienRaiz{
+class bienRaiz extends anuncio{
 
     private _id: number;
     private _precio:string;
@@ -35,8 +35,6 @@ class anuncios extends bienRaiz{
     public set num_dormitorio(value: number) {
         this._num_dormitorio = value;
     }
-
-
     
     public get id(): number {
         return this._id;
