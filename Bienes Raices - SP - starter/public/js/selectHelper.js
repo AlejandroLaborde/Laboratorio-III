@@ -13,7 +13,7 @@ function obtenerTransaccion(arr) {
 }
 
 function cargarSelect(sel, arr) {
-    //limpiarSelect(sel);
+    limpiarSelect(sel);
     let option = document.createElement('option');
     option.value = "Todos";
     option.textContent = "Todos";
@@ -27,10 +27,10 @@ function cargarSelect(sel, arr) {
 }
 
 function limpiarSelect(sel) {
-    //sel.options.length = 0;
-    while (sel.hasChildNodes()) {
-        sel.removeChild(sel.firstElementChild);
-    }
+    sel.options.length = 0;
+    // while (sel.hasChildNodes()) {
+    //     sel.removeChild(sel.firstElementChild);
+    // }
 }
 
 // function calcularEdad(arr) {

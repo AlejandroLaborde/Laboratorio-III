@@ -1,13 +1,10 @@
 
 function crearTabla(array){
-    console.log(array);
-    var tabla=document.createElement("table");
-    tabla.setAttribute('border','1px solid black');
-    tabla.setAttribute('style','border-collapse:collapse');
-    tabla.setAttribute('width','700px');
+    let tabla= document.createElement('table');
+    tabla.setAttribute('border', '2px');
 
     tabla.appendChild(creaTh(array[0]));
-    for(var i in array){
+    for(var i=0;i<array.length;i++){
         tabla.appendChild(creaTr(array[i]));
     }
 

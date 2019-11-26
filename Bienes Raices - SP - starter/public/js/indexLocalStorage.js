@@ -20,6 +20,7 @@ function cargarDatos() {
         arrayAnuncios.push(anunci);
     });
     document.getElementById("eliminar").style.visibility = "visible";
+    
     aux.appendChild(crearTabla(arrayAnuncios));
     cargarSelect($('#ss_tipoTransaccion')[0], obtenerTransaccion(arrayAnuncios));
 }
@@ -121,7 +122,7 @@ function filtrados() {
             break;
     }
 
-    console.log(arrayRetorno.map(element=>element.num_wc)
+    console.log(arrayRetorno.map(element=>element.precio)
     .reduce((prev, curr) => (parseInt(prev) + parseInt(curr))));
 
 
